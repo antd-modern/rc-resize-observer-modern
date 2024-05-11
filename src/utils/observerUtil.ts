@@ -1,5 +1,3 @@
-import ResizeObserver from 'resize-observer-polyfill';
-
 export type ResizeListener = (element: Element) => void;
 
 // =============================== Const ===============================
@@ -12,7 +10,6 @@ function onResize(entities: ResizeObserverEntry[]) {
   });
 }
 
-// Note: ResizeObserver polyfill not support option to measure border-box resize
 const resizeObserver = new ResizeObserver(onResize);
 
 // Dev env only
